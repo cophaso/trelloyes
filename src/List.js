@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card.js';
-import STORE from './store.js';
+
 
 function List(props){
   return(
@@ -8,10 +8,10 @@ function List(props){
       <header className="List-header">
         <h2>{props.header}</h2>
       </header>
-      { props.cardIds.map ( (cardId, i) => {
+      { props.cardIds.map ( (card, i) => {
         return(
-        <Card title={STORE.allCards[cardId].title}
-        content={STORE.allCards[cardId].content}
+        <Card title={card.title}
+        content={card.content}
         key={i}></Card>
         )
       })

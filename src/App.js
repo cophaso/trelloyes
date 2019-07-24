@@ -11,7 +11,10 @@ function App() {
       </header>
       <div className="App-list">
       {STORE.lists.map((list, i) => (
-          <List key={i} header={list.header} cardIds={list.cardIds}></List>
+          <List 
+            key={i} 
+            header={list.header} 
+            cardIds={list.cardIds.map(id => STORE.allCards[id])}></List>
         ))}
       </div>
     </main>
