@@ -14,6 +14,6 @@ describe('List Test', () => {
     const tree = renderer
       .create(<List header="Test Header" cardIds={['a', 'b']} />)
       .toJSON();
-    expect(tree).toMatchSnapshot();  
+    expect(tree).toMatchSnapshot(); 
   });
 });
